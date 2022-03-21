@@ -1,0 +1,36 @@
+.bb {
+    background-image: url('../../../assets/images/slider/slider-img-2.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+.bLeft {
+    border-left: 2px solid #009024;
+    padding-left: 10px;
+}
+
+.cardIcon {
+    height: 240px;
+    width: 148px;
+    border-width: 0px;
+    background-color: #e6edff;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 52px;
+    /* font-family: 'Courgette', cursive !important; */
+}
+
+.bg-primary {
+    background-color: #213b7b !important;
+}
+
+.btn-primary {
+    background-color: #213b7b !important;
+}
+
+.bg-info {
+    background-color: #02aec9 !important;
+}

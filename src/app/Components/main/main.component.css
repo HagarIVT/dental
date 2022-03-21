@@ -1,0 +1,18 @@
+.bb {
+    background-image: url('../../../assets/images/slider/slider-1.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+.bLeft {
+    border-left: 2px solid #009024;
+    padding-left: 10px;
+}
+
+.cardIcon {
+    height: 240px;
+    width: 148px;
+    border-width: 0px;
+    background-color: #e6edff;
+}

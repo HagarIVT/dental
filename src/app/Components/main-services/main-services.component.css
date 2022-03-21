@@ -1,0 +1,405 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400"; */
+
+.badgescard,
+.firstinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.content {
+    position: relative;
+    animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+}
+
+.card {
+    width: 500px;
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:after {
+    content: '';
+    display: block;
+    width: 190px;
+    height: 300px;
+    background: cadetblue;
+    position: absolute;
+    animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
+}
+
+.badgescard {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #8cced6;
+    color: #fff;
+    width: 480px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: -1;
+    left: 10px;
+    bottom: 10px;
+    animation: animainfos 0.5s cubic-bezier(0.425, 1.04, 0.47, 1.105) 0.75s forwards;
+}
+
+.badgescard span {
+    font-size: 1.6em;
+    margin: 0px 6px;
+    opacity: 1.5;
+    color: cadetblue;
+}
+
+.firstinfo {
+    flex-direction: row;
+    z-index: 2;
+    position: relative;
+}
+
+.firstinfo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.firstinfo .profileinfo {
+    padding: 0px 20px;
+}
+
+.firstinfo .profileinfo h1 {
+    font-size: 1.8em;
+}
+
+.firstinfo .profileinfo h3 {
+    font-size: 1.2em;
+    color: #8cced6;
+    font-style: italic;
+}
+
+.firstinfo .profileinfo p.bio {
+    padding: 10px 0px;
+    color: #5A5A5A;
+    line-height: 1.2;
+    font-style: initial;
+}
+
+@keyframes animatop {
+    0% {
+        opacity: 0;
+        bottom: -500px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+@keyframes animainfos {
+    0% {
+        bottom: 10px;
+    }
+    100% {
+        bottom: -42px;
+    }
+}
+
+@keyframes rotatemagic {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+        top: -24px;
+        left: -253px;
+    }
+    100% {
+        transform: rotate(-30deg);
+        top: -24px;
+        left: -78px;
+    }
+}
+
+
+/* ///////////////////////////////// */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300&display=swap'); */
+
+h1 {
+    font-family: 'Righteous', cursive !important;
+    color: #594c94;
+}
+
+h5,
+h4,
+strong,
+h2 {
+    font-family: 'Righteous', cursive !important;
+    color: #52a5be;
+}
+
+.has-shadow {
+    box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
+}
+
+.widget-body {
+    padding: 1.4rem
+}
+
+.flex-row>[class*='col-']>.widget-image {
+    height: 100%;
+    background: rgba(194, 191, 191, 0.1);
+    border-radius: 5px;
+    border: 5px;
+    ;
+}
+
+.image {
+    width: 100%;
+    border-radius: 5px;
+    border: 5px;
+    ;
+}
+
+.widget-image {
+    background: rgb(155, 147, 147, 0.1);
+    border-radius: 5px;
+    border: 5px;
+    margin-bottom: 30px;
+    position: relative
+}
+
+.contact-card-2 {
+    margin-top: 0;
+    position: relative
+}
+
+.contact-card-2 .cover-bg {
+    display: block
+}
+
+.contact-card-2 .cover-bg>img {
+    display: block;
+    margin-bottom: 0;
+    transition: all .25s ease-in-out
+}
+
+.contact-card-2 .cover-image {
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: -50px;
+    left: 0;
+    right: 0
+}
+
+.contact-card-2 .cover-image>img {
+    display: block;
+    width: 100px;
+    border: 6px solid #fff;
+    transition: all .25s ease-in-out
+}
+
+.contact-card-2 .widget-body {
+    position: relative
+}
+
+.contact-card-2 .name {
+    color: #594c94;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    text-align: center
+}
+
+.contact-card-2 .job {
+    color: #968cc0;
+    font-size: 1rem;
+    text-align: center
+}
+
+.contact-card-2 .stats {
+    margin-top: 1.4rem
+}
+
+.contact-card-2 .stats .counter {
+    display: block;
+    color: #5d5386;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center
+}
+
+.contact-card-2 .stats .text {
+    color: #aea9c3;
+    display: block;
+    text-align: center
+}
+
+.contact-card-2 .btn-group {
+    padding: 2rem 0 1.4rem
+}
+
+.contact-card-2 .quick-about {
+    text-align: center;
+    margin-top: 1.4rem
+}
+
+.contact-card-2 .quick-about h4 {
+    color: #2c304d;
+    font-weight: 600;
+    margin-bottom: .4rem
+}
+
+.contact-card-2 .quick-about p {
+    font-size: .9rem;
+    margin: 0
+}
+
+.contact-card-2 .owl-dots {
+    float: left;
+    margin-top: 1.4rem;
+    text-align: center;
+    width: 100%
+}
+
+.contact-card-2 .owl-dots .owl-dot {
+    border: 2px solid #aea9c3;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    margin: 0 .3rem;
+    width: 12px;
+    transition: all 0.3s ease 0s
+}
+
+.contact-card-2 .owl-dots .owl-dot:hover {
+    border-color: #e76c90
+}
+
+.contact-card-2 .owl-dots .owl-dot.active {
+    border: 2px solid #e76c90
+}
+
+.quick-actions.hover {
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: none;
+}
+
+.contact-card-2 .cover-image {
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: -50px;
+    left: 0;
+    right: 0;
+}
+
+.contact-card-2 .name {
+    color: #3e2f83;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-gradient-01,
+.btn-gradient-01 a {
+    background: #e23f83;
+    background: linear-gradient(to right, #e23f83 0%, #ea5844 100%);
+    background-size: 200% auto;
+    font-weight: 600;
+    transition: 0.5s;
+    color: #fff;
+    border: 0 none;
+    padding: 12px 20px;
+}
+
+.btn-shadow,
+.btn-shadow a {
+    color: #3e2f83;
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .15);
+}
+
+
+/* ///////////////////////////// */
+
+.comment-wrapper .panel-body {
+    max-height: 200px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom: 1px dashed #efefef;
+    margin-bottom: 25px;
+}
+
+._Review {
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-image: url("assets/Img/hospitalize.jpg"); */
+    /* //background-color: rgba(197, 197, 197, 0.2); */
+    opacity: 1;
+}
+
+.transbox {
+    background-color: #ffffff;
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+.hh {
+    height: 80vh;
+}
+
+.aactive {
+    color: cadetblue !important;
+}
+
+.pp {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.ppp {
+    z-index: -1;
+}

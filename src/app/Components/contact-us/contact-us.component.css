@@ -1,0 +1,44 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.contact3 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+}
+
+.contact3 h1,
+.contact3 h2,
+.contact3 h3,
+.contact3 h4,
+.contact3 h5,
+.contact3 h6 {
+    color: #3e4555;
+}
+
+.contact3 .font-weight-medium {
+    font-weight: 500;
+}
+
+.contact3 .card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.contact3 .btn-danger-gradiant {
+    background: #240090;
+    background: -webkit-gradient(linear, left top, right top, from(#240090), to(#3a22a0));
+    background: -webkit-linear-gradient(left, #240090 10%, #3a22a0 90%);
+    background: -o-linear-gradient(left, #240090 10%, #3a22a0 90%);
+    background: linear-gradient(to right, #240090 10%, #bdaeff 90%);
+}
+
+.contact3 .btn-danger-gradiant:hover {
+    background: #240090;
+    background: -webkit-gradient(linear, left top, right top, from(#3a22a0), to(#240090));
+    background: -webkit-linear-gradient(left, #3a22a0 10%, #240090 90%);
+    background: -o-linear-gradient(left, #3a22a0 10%, #240090 90%);
+    background: linear-gradient(to right, #bdaeff 10%, #240090 90%);
+}
+
+.infoDet {
+    font-size: 15px;
+}
