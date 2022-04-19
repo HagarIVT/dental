@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IDoctor } from 'src/app/Model/idoctor';
 import { CRUDService } from 'src/app/Services/crud.service';
 
 @Component({
@@ -9,28 +11,36 @@ import { CRUDService } from 'src/app/Services/crud.service';
 })
 export class DoctorComponent implements OnInit {
 
-  InfoDoctor:any;
-  imgpath:string="assets/Img/";
-  tel="tel:+";
-  mailto="mailto:";
+  InfoDoctor:IDoctor[]=[];
 
-
-
-
-
-
-face = "https://www.facebook.com/profile.php?id=100009531174236";
-
-
-
-  constructor(_serve:CRUDService,_HttpClint:HttpClient)
+  constructor( 
+    private crudService:CRUDService,
+    private router: Router)
   {
-    _serve.getInfoDoctor().subscribe(data=>{
-      this.InfoDoctor=data;});
+
    }
 
   ngOnInit(): void {
+    this.getAllDoctor()
   }
 
 
+  getAllDoctor(){
+    this.crudService.GetAllDoctors().subscribe(
+      (res) => {
+
+        this.InfoDoctor=res
+        console.log(res)
+
+      },
+      (err) => {
+        console.log(err)
+       }
+    );
+  }
+
+  docInfo(docID:number){
+this.router.navigateByUrl('/doctorInfo/'+docID)
+
+  }
 }

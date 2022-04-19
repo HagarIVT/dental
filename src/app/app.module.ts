@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,7 @@ import { AppointmentComponent } from './Components/appointment/appointment.compo
 import { DoctorInfoComponent } from './Components/doctor-info/doctor-info.component';
 import { DoctorProfileComponent } from './Components/Doctors/doctor-profile/doctor-profile.component';
 import { UserprofileComponent } from './Components/userprofile/userprofile.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { UserprofileComponent } from './Components/userprofile/userprofile.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CommonModule ,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

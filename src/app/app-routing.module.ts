@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'doctorprofile', component: DoctorProfileComponent },
   { path: 'services', component: MainServicesComponent },
   { path: 'appointment', component: AppointmentComponent },
-  { path: 'doctorInfo', component: DoctorInfoComponent },
+  { path: 'doctorInfo/:id', component: DoctorInfoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'userAccount', component: UserprofileComponent },

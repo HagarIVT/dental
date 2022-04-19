@@ -2,7 +2,7 @@
     <div class="bg-image p-5 text-center d-flex shadow-1-strong rounded mb-5 text-white bb align-items-center">
         <div class="container text-center ">
 
-            <h1 class="title" style="color: white;">DOCTOR</h1>
+            <h1 class="title" style="color: white;">اطباء</h1>
         </div>
     </div>
     <br>
@@ -11,21 +11,16 @@
         <div class="row justify-content-center">
             <div *ngFor="let data of InfoDoctor" class="content my-5  col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
-                    <div class="firstinfo"><img src="../../../assets/images/team/team-3.jpg" />
+                    <div class="firstinfo">
                         <div class="profileinfo">
-                            <h1>{{data.DoctorName}}</h1>
-                            <h3>{{data.DoctorSpecialty}}</h3>
-                            <p class="bio">Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+                            <h1>{{data.doctorName}}</h1>
+                            <h3>{{data.department}}</h3>
+                            <p>{{data.doctorDescription}}</p>
                         </div>
-                        <button class="btn btn-primary" routerLink="/doctorInfo"> -></button>
+                        <button class="btn btn-primary" (click)="docInfo(data.doctorID)"> -></button>
                     </div>
                 </div>
-                <div class="badgescard ">
-                    <a [href]="data.DoctorFaceBook"><span class="ri-twitter-fill"></span></a>
-                    <a [href]="data.DoctorLinkedIn"><span class="fa fa-linkedin"></span></a>
-                    <a [href]="tel+data.DoctorPhone"><span class="fa-solid fa-phone"></span></a>
-                    <a [href]="mailto+data.DoctorEmail"><span class="fa-solid fa-envelope"></span></a>
-                </div>
+
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@
             <div id="user-profile-2" class="user-profile">
                 <div class="tabbable">
                     <ul class="nav nav-tabs padding-18">
-                        <li class="active">
+                        <!-- <li class="active">
                             <a data-toggle="tab" href="#home">
                                 <i class="green ace-icon fa fa-user bigger-120"></i> Profile
                             </a>
@@ -16,23 +16,23 @@
                             <a data-toggle="tab" href="#feed">
                                 <i class="orange ace-icon fa fa-rss bigger-120"></i> review
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li>
+                        <li class="active">
                             <a data-toggle="tab" href="#friends">
-                                <i class="blue ace-icon fa fa-users bigger-120"></i> Timeline
+                                <i class="blue ace-icon fa fa-users bigger-120"></i>اطباء
                             </a>
                         </li>
 
                         <li>
                             <a data-toggle="tab" href="#pictures">
-                                <i class="pink ace-icon fa fa-picture-o bigger-120"></i> schedual
+                                <i class="pink ace-icon fa fa-picture-o bigger-120"></i> المواعيد
                             </a>
                         </li>
                     </ul>
 
                     <div class="tab-content no-border padding-24">
-                        <div id="home" class="tab-pane in active">
+                        <!-- <div id="home" class="tab-pane in active">
                             <div class="container bootstrap snippets bootdey">
                                 <div class="panel-body inf-content">
                                     <div class="row p-4">
@@ -154,7 +154,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /#home -->
 
                         <div id="feed" class="tab-pane">
                             <div class="profile-feed row">
@@ -264,7 +263,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.col -->
 
                                 <div class="col-sm-6">
                                     <div class="profile-activity clearfix">
@@ -369,9 +367,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.col -->
                             </div>
-                            <!-- /.row -->
 
                             <div class="space-12"></div>
 
@@ -383,8 +379,7 @@
               <i class="icon-on-right ace-icon fa fa-arrow-right"></i>
             </button>
                             </div>
-                        </div>
-                        <!-- /#feed -->
+                        </div> -->
 
                         <div id="friends" class="tab-pane">
                             <div class="row">
@@ -417,94 +412,24 @@
                             <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
                             <div class="container bootdey">
                                 <div class="panel panel-default panel-order">
-                                    <!-- <div class="panel-heading">
-                                        <strong>Order history</strong>
-                                        <div class="btn-group pull-right">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Filter history <i class="fa fa-filter"></i></button>
-                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                    <li><a href="#">Approved orders</a></li>
-                                                    <li><a href="#">Pending orders</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
                                     <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-md-1"><img src="https://bootdey.com/img/Content/user_3.jpg" class="media-object img-thumbnail" /></div>
-                                            <div class="col-md-11">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="pull-right"><label class="badge  text-light bg-danger">rejected</label></div>
-                                                        <span><strong>Ahmed Hossam</strong></span> <span class="label label-info"></span><br /> Date : 05/31/2014, Time: 7:00PM <br />
-                                                        <!-- <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                                                        <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
-                                                        <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a> -->
-
-                                                        <br>
-                                                        <br>
-                                                    </div>
-
+                                        <div class="row" *ngFor="let item of AppointmentClient">
+                                            <div class="col-md-12">
+                                                <div class="pull-right">
+                                                    <label class="">الدكتور</label>
+                                                    <h3>{{item.doctorName}}</h3>
                                                 </div>
+                                                <span><strong>{{item.clientName}}</strong></span><br>
+                                                <span><strong>{{item.clientPhone}}</strong></span><br>
+                                                <span><strong>{{item.clientEmail}}</strong></span><br>
+
+
+                                                <span class="label label-info"></span><br /> {{item.dateAppointment| date:'short'}} <br/>
+
+                                                <br>
+                                                <br>
                                             </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-md-1"><img src="https://bootdey.com/img/Content/user_1.jpg" class="media-object img-thumbnail" /></div>
-                                            <div class="col-md-11">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="pull-right"><label class="badge  text-light bg-success">Accept</label></div>
-                                                        <span><strong>Ahmed Hossam</strong></span> <span class="label label-info"></span><br /> Date : 05/31/2014, Time: 7:00PM <br />
-                                                        <!-- <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                                                    <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
-                                                    <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a> -->
-
-                                                        <br>
-                                                        <br>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-1"><img src="https://bootdey.com/img/Content/user_3.jpg" class="media-object img-thumbnail" /></div>
-                                            <div class="col-md-11">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="pull-right"><label class="badge  text-light bg-primary">cancle</label></div>
-                                                        <span><strong>Ahmed Hossam</strong></span> <span class="label label-info"></span><br /> Date : 05/31/2014, Time: 7:00PM <br />
-                                                        <!-- <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                                                    <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
-                                                    <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a> -->
-
-                                                        <br>
-                                                        <br>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-1"><img src="https://bootdey.com/img/Content/user_2.jpg" class="media-object img-thumbnail" /></div>
-                                            <div class="col-md-11">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="pull-right"><label class="badge text-light bg-success">Accept</label></div>
-                                                        <span><strong>Ahmed Hossam</strong></span> <span class="label label-info"></span><br /> Date : 05/31/2014, Time: 7:00PM <br />
-                                                        <!-- <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                                                    <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
-                                                    <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a> -->
-
-                                                        <br>
-                                                        <br>
-                                                    </div>
-
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
